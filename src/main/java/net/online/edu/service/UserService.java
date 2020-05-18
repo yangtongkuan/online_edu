@@ -8,4 +8,6 @@ package net.online.edu.service;
  * @To change this template use File | Settings | File Templates.
  */
 public interface UserService {
+
+    String login(String username,String pwd);
 }
