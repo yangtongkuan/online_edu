@@ -1,5 +1,7 @@
 package net.online.edu.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -12,6 +14,7 @@ public class User {
 
     private String username;
 
+    @JsonIgnore
     private String pwd;
 
     public User() {
