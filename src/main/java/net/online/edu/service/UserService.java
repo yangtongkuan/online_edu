@@ -1,5 +1,7 @@
 package net.online.edu.service;
 
+import net.online.edu.domain.User;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -9,5 +11,7 @@ package net.online.edu.service;
  */
 public interface UserService {
 
-    String login(String username,String pwd);
+    String login(String username, String pwd);
+
+    User getUserByToken(String token);
 }

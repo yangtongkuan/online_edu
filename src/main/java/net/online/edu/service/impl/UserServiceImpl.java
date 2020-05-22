@@ -5,6 +5,7 @@ import net.online.edu.mapper.UserMapper;
 import net.online.edu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,5 +36,10 @@ public class UserServiceImpl implements UserService {
             sessionMap.put(token, user);
             return token;
         }
+    }
+
+    @Override
+    public User getUserByToken(String token) {
+        return StringUtils.isEmpty(token) ? null : sessionMap.get(token);
     }
 }
