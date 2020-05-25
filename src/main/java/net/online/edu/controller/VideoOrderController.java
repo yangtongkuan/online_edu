@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class VideoOrderController {
     @PostMapping("/save")
     public JsonData saveOrder() {
+        System.out.println("注册成功了~");
+        System.out.println(1/0);
         return JsonData.buildSuccess("下单成功");
     }
 }
